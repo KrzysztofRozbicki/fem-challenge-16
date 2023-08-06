@@ -1,0 +1,7 @@
+:root {
+  --cl-secondary: hsl(0, 0%, 59%);
+  --cl-primary: hsl(0, 0%, 17%);
+  --breakpoint: 768px;
+  --desktop-size: 1440px;
+  --white: #fff;
+}
