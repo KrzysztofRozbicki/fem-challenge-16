@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fem-challenge-16/static/css/main.32c3c0b2.css",
+    "main.js": "/fem-challenge-16/static/js/main.43c47a32.js",
+    "static/js/787.9374d492.chunk.js": "/fem-challenge-16/static/js/787.9374d492.chunk.js",
+    "index.html": "/fem-challenge-16/index.html",
+    "main.32c3c0b2.css.map": "/fem-challenge-16/static/css/main.32c3c0b2.css.map",
+    "main.43c47a32.js.map": "/fem-challenge-16/static/js/main.43c47a32.js.map",
+    "787.9374d492.chunk.js.map": "/fem-challenge-16/static/js/787.9374d492.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32c3c0b2.css",
+    "static/js/main.43c47a32.js"
+  ]
+}
