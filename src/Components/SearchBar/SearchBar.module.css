@@ -1,0 +1,35 @@
+@import '../../styles/variables.css';
+
+.form {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  max-width: 320px;
+}
+
+.formBtn {
+  border: none;
+  background-color: #000;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.input {
+  padding: 1.125rem 1.5rem;
+  border: none;
+  max-width: 200px;
+}
+.input:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .form {
+    max-width: none;
+  }
+  .input {
+    max-width: 500px;
+    width: 500px;
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../styles/variables.css';
+
+.information {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  color: var(--cl-primary);
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+}
+
+.infoHeader {
+  color: var(--cl-secondary);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.infoText {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .information {
+    left: 50%;
+    transform: translate(-50%, 40%);
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1110px;
+    padding-block: 2.25rem;
+    padding-inline: 2rem;
+    text-align: left;
+  }
+  .informationBox:not(:first-child) {
+    padding-left: 4rem;
+    border-left: 1px solid var(--cl-secondary);
+  }
+}
