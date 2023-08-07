@@ -1,9 +1,31 @@
+import { useState, useEffect } from 'react';
 import arrow from '../../assets/icons/icon-arrow.svg';
 import css from './SearchBar.module.css';
+import { fetchIpData } from '../../utils/IPApi';
+import { useMapContext } from '../../context/MapContext';
 
 const SearchBar = () => {
+  const { setMap } = useMapContext();
+  const [ip, setIp] = useState('');
+
+  const fetchMap = async () => {
+    const data = await fetchIpData(ip);
+    await setMap(data);
+  };
+
+  const handleIpSubmit = async event => {
+    event.preventDefault();
+    const inputValue = event.target.elements.search.value;
+    setIp(inputValue);
+    event.target.reset();
+  };
+
+  useEffect(() => {
+    fetchMap();
+  }, [ip]);
+
   return (
-    <form className={css.form}>
+    <form onSubmit={handleIpSubmit} className={css.form}>
       <input
         type="text"
         name="search"

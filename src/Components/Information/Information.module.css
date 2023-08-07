@@ -34,7 +34,7 @@
 @media (min-width: 768px) {
   .information {
     left: 50%;
-    transform: translate(-50%, 40%);
+    transform: translate(-50%, 20%);
     flex-direction: row;
     max-width: 1110px;
     padding-block: 2.25rem;
