@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { IP_API_KEY, IP_API_URL } from '../config/constants';
 
-export const fetchIpData = async ipAddress => {
+export const fetchIpData = async (input, domain) => {
   try {
     const response = await axios.get(IP_API_URL, {
       params: {
         apiKey: IP_API_KEY,
-        ipAddress: ipAddress,
+        ...(domain ? { domain: input } : { ipAddress: input }),
       },
     });
     return response.data;
