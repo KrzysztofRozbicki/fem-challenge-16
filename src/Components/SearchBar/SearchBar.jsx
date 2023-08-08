@@ -6,23 +6,30 @@ import { useMapContext } from '../../context/MapContext';
 
 const SearchBar = () => {
   const { setMap } = useMapContext();
-  const [ip, setIp] = useState('');
+  const [input, setInput] = useState('');
+
+  const checkForDomain = input => {
+    const periodCount = input.split('.').length - 1;
+    if (periodCount === 1) return true;
+    return false;
+  };
 
   const fetchMap = async () => {
-    const data = await fetchIpData(ip);
+    const isDomain = checkForDomain(input);
+    const data = await fetchIpData(input, isDomain);
     await setMap(data);
   };
 
   const handleIpSubmit = async event => {
     event.preventDefault();
     const inputValue = event.target.elements.search.value;
-    setIp(inputValue);
+    setInput(inputValue);
     event.target.reset();
   };
 
   useEffect(() => {
     fetchMap();
-  }, [ip]);
+  }, [input]);
 
   return (
     <form onSubmit={handleIpSubmit} className={css.form}>
