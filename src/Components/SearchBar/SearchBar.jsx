@@ -10,7 +10,7 @@ const SearchBar = () => {
 
   const checkForDomain = input => {
     const periodCount = input.split('.').length - 1;
-    if (periodCount === 1) return true;
+    if (periodCount < 3) return true;
     return false;
   };
 
