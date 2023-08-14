@@ -22,12 +22,14 @@
 .infoHeader {
   color: var(--cl-secondary);
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.5px;
   margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .infoText {
+  font-size: 18px;
   margin: 0;
 }
 
