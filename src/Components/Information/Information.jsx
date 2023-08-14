@@ -8,11 +8,11 @@ const Information = () => {
   return (
     <section className={css.information}>
       <div className={css.informationBox}>
-        <p className={css.infoHeader}>IP ADDRESS</p>
+        <h3 className={css.infoHeader}>IP ADDRESS</h3>
         <p className={css.infoText}>{ip || 'XXX.XXX.XXX.XXX'}</p>
       </div>
       <div className={css.informationBox}>
-        <p className={css.infoHeader}>LOCATION</p>
+        <h3 className={css.infoHeader}>LOCATION</h3>
         <p className={css.infoText}>
           {location?.city
             ? `${location.city}, ${location.region}, ${location.country} ${location.postalCode}`
@@ -20,11 +20,11 @@ const Information = () => {
         </p>
       </div>
       <div className={css.informationBox}>
-        <p className={css.infoHeader}>TIMEZONE</p>
+        <h3 className={css.infoHeader}>TIMEZONE</h3>
         <p className={css.infoText}>{'UTC ' + (location?.timezone || '-01:00')}</p>
       </div>
       <div className={css.informationBox}>
-        <p className={css.infoHeader}>ISP</p>
+        <h3 className={css.infoHeader}>ISP</h3>
         <p className={css.infoText}>{isp || 'SPACE X'}</p>
       </div>
     </section>
